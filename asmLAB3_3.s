@@ -172,7 +172,7 @@ LOOP
         LDR R4,=PIOC_CODR           ; reset led 1 and 2
         MOV R5,#0x6                 
         STR R5,[R4]
-        MOV R3,#0                   ; nollställer räknevariabel
+        MOV R3,#0                   ; reset the counter
         
         
 GO       
@@ -289,7 +289,7 @@ PAUSE    LDR R0,=PIOA_PDSR
 ; Delay function
 ; Input (argument): R7 - delay in ms
 ; ---------------------------------------------------------
-DELAY_CALIB EQU 1200            ; calculated value (based on master clock) –12Mhz)
+DELAY_CALIB EQU 1200            ; calculated value (based on master clock) Â–12Mhz)
 Delay_ms
       
       STMFD SP!,{R0,R1, LR}     ; Store R0, R1 and Link register at stack pointer
